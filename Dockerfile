@@ -25,7 +25,7 @@ ENV SERVER_NAME="factorio server" \
 
 CMD ["./new_smart_launch.sh"]
 
-ARG VERSION=0.14.2
+ARG VERSION=0.14.3
 
 ADD https://www.factorio.com/get-download/$VERSION/headless/linux64 /tmp/factorio_headless_x64_$VERSION.tar.gz
 RUN tar xzf /tmp/factorio_headless_x64_$VERSION.tar.gz && \
