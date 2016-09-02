@@ -19,7 +19,9 @@ ENV SERVER_NAME="factorio server" \
     SERVER_DESCRIPTION="" \
     SERVER_VISIBILITY="hidden" \
     SERVER_GAME_PASSWORD="" \
-    SERVER_VERIFY_IDENTITY="true"
+    SERVER_VERIFY_IDENTITY="true" \
+    SERVER_USERNAME="" \
+    SERVER_PASSWORD=""
 
 CMD ["./new_smart_launch.sh"]
 

@@ -14,8 +14,8 @@ cat << EOF > $SERVER_SETTINGS
   "visibility": "$SERVER_VISIBILITY",
 
   "_comment_credentials": "Your factorio.com login credentials. Required for games with visibility public",
-  "username": "",
-  "password": "",
+  "username": "$SERVER_USERNAME",
+  "password": "$SERVER_PASSWORD",
 
   "_comment_token": "Authentication token. May be used instead of 'password' above.",
   "token": "",

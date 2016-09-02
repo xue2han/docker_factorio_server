@@ -36,5 +36,9 @@ Server settings:
 * `SERVER_NAME="factorio server"`
 * `SERVER_DESCRIPTION=""`
 * `SERVER_VISIBILITY="hidden"`
+if you set `SERVER_VISIBILITY="public"`,make sure that you also set SERVER_USERNAME and SERVER_PASSWORD which are your factorio.com login credentials.
+
 * `SERVER_GAME_PASSWORD=""`
 * `SERVER_VERIFY_IDENTITY="true"`
+* `SERVER_USERNAME=""`(Required if SERVER_VISIBILITY="public")
+* `SERVER_PASSWORD=""`(Required if SERVER_VISIBILITY="public")
