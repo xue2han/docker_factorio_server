@@ -6,7 +6,7 @@ See [factorio's site](http://www.factorio.com)
 
 Current Version
 ---------------
-0.14.2
+0.14.3
 
 
 How to use ?
