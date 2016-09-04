@@ -27,7 +27,7 @@ cat << EOF > $SERVER_SETTINGS
 }
 EOF
 
-MAP_GEN_SETTINGS=/op/factorio/map-gen-settings.json
+MAP_GEN_SETTINGS=/opt/factorio/map-gen-settings.json
 cat << EOF > $MAP_GEN_SETTINGS
 {
   "_comment": "Sizes can be specified as none, very-low, low, normal, high, very-high",
