@@ -4,14 +4,18 @@ WORKDIR /opt
 
 COPY ./new_smart_launch.sh /opt
 
-VOLUME /opt/factorio/saves /opt/factorio/mods
+VOLUME /opt/factorio/saves /opt/factorio/mods /opt/factorio/scenarios
 
 ENV FACTORIO_AUTOSAVE_INTERVAL=2 \
     FACTORIO_AUTOSAVE_SLOTS=3 \
     FACTORIO_ALLOW_COMMANDS=false \
     FACTORIO_NO_AUTO_PAUSE=false \
     FACTORIO_WAITING=false \
+    FACTORIO_SCENARIO="" \
     FACTORIO_MODE=normal
+
+ENV MAP_WIDTH=0 \
+    MAP_HEIGHT=0 
 
 EXPOSE 34197/udp 27015/tcp
 

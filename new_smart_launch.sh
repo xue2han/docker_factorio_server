@@ -27,6 +27,28 @@ cat << EOF > $SERVER_SETTINGS
 }
 EOF
 
+MAP_GEN_SETTINGS=/op/factorio/map-gen-settings.json
+cat << EOF > $MAP_GEN_SETTINGS
+{
+  "_comment": "Sizes can be specified as none, very-low, low, normal, high, very-high",
+
+  "terrain_segmentation": "normal",
+  "water": "normal",
+  "width": $MAP_WIDTH,
+  "height": $MAP_HEIGHT,
+  "starting_area": "normal",
+  "peaceful_mode": false,
+  "autoplace_controls":
+  {
+    "coal": {"frequency": "normal", "size": "normal", "richness": "normal"},
+    "copper-ore": {"frequency": "normal", "size": "normal", "richness": "normal"},
+    "crude-oil": {"frequency": "normal", "size": "normal", "richness": "normal"},
+    "enemy-base": {"frequency": "normal", "size": "normal", "richness": "normal"},
+    "iron-ore": {"frequency": "normal", "size": "normal", "richness": "normal"},
+    "stone": {"frequency": "normal", "size": "normal", "richness": "normal"}
+  }
+}
+EOF
 
 # Setting initial command
 mode=""
@@ -61,7 +83,7 @@ if [ "$(ls -A $save_dir)" ]; then
   echo "Taking latest save"
 else
   echo "# Creating a new map [save.zip]"
-  /opt/factorio/bin/x64/factorio --create save.zip
+  /opt/factorio/bin/x64/factorio --map-gen-settings $MAP_GEN_SETTINGS  --create save.zip
 fi
 
 # Closing stdin
