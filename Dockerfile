@@ -15,7 +15,7 @@ ENV FACTORIO_AUTOSAVE_INTERVAL=2 \
     FACTORIO_MODE=normal
 
 ENV MAP_WIDTH=0 \
-    MAP_HEIGHT=0 
+    MAP_HEIGHT=0
 
 EXPOSE 34197/udp 27015/tcp
 
@@ -29,7 +29,7 @@ ENV SERVER_NAME="factorio server" \
 
 CMD ["./new_smart_launch.sh"]
 
-ARG VERSION=0.14.3
+ARG VERSION=0.14.4
 
 ADD https://www.factorio.com/get-download/$VERSION/headless/linux64 /tmp/factorio_headless_x64_$VERSION.tar.gz
 RUN tar xzf /tmp/factorio_headless_x64_$VERSION.tar.gz && \
